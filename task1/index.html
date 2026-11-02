@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Food Cart</title>
+</head>
+<body>
+  <header><h1>Online Food Order</h1></header>
+
+  <main>
+    <section>
+      <h2>Food Menu</h2>
+      <div class="food">
+        <div><h3>Pizza</h3><p>$10</p></div>
+        <button onclick="addToCart('Pizza', 10)">Add</button>
+      </div>
+      <div class="food">
+        <div><h3>Burger</h3><p>$7</p></div>
+        <button onclick="addToCart('Burger', 7)">Add</button>
+      </div>
+      <div class="food">
+        <div><h3>Fries</h3><p>$4</p></div>
+        <button onclick="addToCart('Fries', 4)">Add</button>
+      </div>
+      <div class="food">
+        <div><h3>Soft Drink</h3><p>$2</p></div>
+        <button onclick="addToCart('Soft Drink', 2)">Add</button>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Cart</h2>
+      <div id="cart">Cart is empty.</div>
+      <div class="total">Total: $<span id="total">0</span></div>
+      <button onclick="placeOrder()">Place Order</button>
+      <p id="message"></p>
+    </section>
+  </main>
+</body>
+</html>
