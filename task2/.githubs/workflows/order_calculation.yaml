@@ -1,0 +1,22 @@
+name: Order Calculation
+
+on:
+  push:
+    branches:[main]
+  pull-request:
+    branches:[main]
+
+jobs:
+  build:
+    runs-on:Windows-latest
+  steps:
+    name:checkout code
+    uses:actions/checkout@v4
+
+    name:setup python
+    uses:actions/setup-python@v5
+    with:
+      python-version:'3.11.8'
+    
+    name:run the code
+    run:python order_calculation.py
